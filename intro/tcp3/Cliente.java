@@ -45,7 +45,11 @@ public class Cliente {
                 System.out.println("Recibiendo un mensaje del servidor: " + respuesta);
                 
                 System.out.println("Si desea salir introduzca 0: ");
-                int decision =ServicioCliente.pedirEnteroPositivo(sc);
+
+                while(!sc.hasNextInt()){
+                    sc.next();
+                }int decision = sc.nextInt();
+
                 if (decision==0) {
                     System.out.println("Cerrando comunicacion");
                     break;

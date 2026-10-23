@@ -13,12 +13,18 @@ public class ServicioCliente {
                 sc.next();
             }
             numero = sc.nextInt();
-            if (numero < 1 || numero > 49) {
+            if ((numero < 1 || numero > 49)) {
                 System.out.println("Error: El número debe estar comprendido entre 1 y 49. Inténtalo de nuevo.");
             }
-        } while (numero < 1 || numero > 49);
+           
+        } while ((numero < 1 || numero > 49) );
         return numero;
     }
+
+ 
+                
+           
+
 
 
 public static boolean tieneDuplicados(int[] numeros) {

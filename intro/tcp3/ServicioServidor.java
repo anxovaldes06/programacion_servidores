@@ -11,7 +11,7 @@ public class ServicioServidor {
 
     public static void rellenarArrayServidor() {
         boolean esValido = true;
-        int[] arraySinRepeticiones = new int[6];
+        int[] arraySinRepeticiones = new int[7];
         do {
             for (int i = 0; i < arrayServidor.length; i++) {
                 arraySinRepeticiones[i] = (int) (Math.random() * 49) + 1;
