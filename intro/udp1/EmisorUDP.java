@@ -16,13 +16,10 @@ public class EmisorUDP {
 			InetAddress destino = InetAddress.getLocalHost();
 			String saludo = "Enviando Saludos desde cliente !!";
 
-			// Convertimos la cadena a bytes especificando la codificación UTF-8
 			byte[] mensaje = saludo.getBytes(StandardCharsets.UTF_8);
 
-			// Construimos el datagrama indicando datos, longitud, IP y puerto
 			DatagramPacket envio = new DatagramPacket(mensaje, mensaje.length, destino, puerto);
 
-			// Enviamos el paquete por el socket UDP (USO EL socket con SEND)
 			socket.send(envio);
 			System.out.println("Mensaje enviado correctamente a " + destino + ":" + puerto);
 
